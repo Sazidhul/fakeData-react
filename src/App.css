@@ -1,0 +1,8 @@
+.main-container{
+   display: flex;
+   justify-content: space-around;
+}
+.cards-container{
+   width: 350px;
+   box-shadow: 4px 4px 8px gray;
+}
