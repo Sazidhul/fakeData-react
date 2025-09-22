@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import SingleProduct from './SingleProduct';
 
 function App() {
 
@@ -17,26 +18,16 @@ function App() {
       setProduct(data);
     })
   },[])
-  console.log(product);
+  // console.log(product);
 
   
   return (
     <>
         <div className='main-container'>
          <div className="cards-container">
-           <div className='card'>
-            <img className='card-img' src="https://zpacks.com/cdn/shop/files/Zpacks-TrailCoolMerinoWoolT-Shirt-01_2048x.jpg?v=1686743695" alt="" />
-            <h1>Tesr test</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, dolorum modi. Pariatur quas nemo provident odio, facere harum molestiae? Voluptatibus at obcaecati voluptate blanditiis quibusdam quam nemo repudiandae molestias perspiciatis!</p>
-            <div className='card-footer'>
-              <h1>520 $</h1>
-              <button className='add-btn'>Add To Cart</button>
-            </div>
-           </div>
-
-           <div className="card">
-            <img src="" alt="" />
-           </div>
+          {
+            product.map(item =><SingleProduct product={item}></SingleProduct>)
+          }
          </div>
          <div className="cards-container">
             <h1>This is cart</h1>
