@@ -18,3 +18,11 @@
    display: flex;
    justify-content: space-around;
 }
+.cart-title{
+   display: flex;
+   justify-content: space-around;
+}
+.cart-info{
+   display: flex;
+   justify-content: space-around;
+}
