@@ -37,7 +37,10 @@ function App() {
   console.log(cart);
 
   // This function is for Delete the data or remove for the help of (find)
-  
+  const handleDelete = (id) =>{
+    const newCart= cart.filter((item) =>item.id != id);
+    setCart(newCart);
+  }
   
   return (
     <>
@@ -57,11 +60,12 @@ function App() {
 
             {/*  */}
             <div>
-                {cart.map((item)=>(
+                {cart.map((item,index)=>(
                   <div className='cart-info'>
+                    <p>{index + 1}</p>
                     <h5>{item.title.slice(0,10)}</h5>
                     <h5>{item.price} $</h5>
-                    <button>Delete</button>
+                    <button onClick={()=>handleDelete(item.id)}>Delete</button>
                   </div>
                 ))}
             </div>
